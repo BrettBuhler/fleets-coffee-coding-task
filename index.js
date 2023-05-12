@@ -2,10 +2,8 @@ const express = require('express')
 const app = express()
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
+app.get('/', (express.static('public')))
 
-})
-
-app.listen(5001, ()=> {
-    console.log('Listening on port 5001')
+app.listen('fleetscoffeecodingtask.us-east-1.elasticbeanstalk.com', ()=> {
+    console.log('Listening on port elasticbeanstalk')
 })
