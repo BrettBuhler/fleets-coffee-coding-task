@@ -4,6 +4,6 @@ app.use(express.static('public'))
 
 app.get('/', (express.static('public')))
 
-app.listen('fleetscoffeecodingtask.us-east-1.elasticbeanstalk.com', ()=> {
+app.listen(5001, ()=> {
     console.log('Listening on port elasticbeanstalk')
 })
