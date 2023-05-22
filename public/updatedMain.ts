@@ -1,13 +1,8 @@
 const firstNonRepeated = (s: string): string => {
 
-    //interface for the character object that holds repeated and non repeated characters
-    interface charObject {
-        [key: string]: number
-    }
-
     //Declaration for character objects
-    let nonRepeated: Partial<charObject> = {}
-    let repeated: Partial<charObject> = {}
+    let nonRepeated = new Map<string, string>()
+    let repeated = new Map<string, string>()
 
     /**
      * Loop through all characters in s. If a character does not exist in either nonReapeated or repeated,
@@ -31,3 +26,6 @@ const firstNonRepeated = (s: string): string => {
     //if the array has a length of greater than 0, return the first key, else return an empty string
     return keys.length > 0 ? keys[0] : ''
 }
+
+console.log(firstNonRepeated('aabbcc'))
+console.log(firstNonRepeated('aabcdefg'))
